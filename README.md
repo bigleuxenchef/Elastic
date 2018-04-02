@@ -15,7 +15,7 @@ Here are my favorite
 
 ## Integration
 
-- [:eyes:Elastic in R-CRAN](./R-Elastic/README.md)
+- [:eyes:Elastic in R-CRAN](https://github.com/bigleuxenchef/R-Elastic)
 
 ## Utilities
 - [:eyes:Elastic Delete duplicates with logstash](./DeleteDuplicates/LogstashDeleteSample.md)
