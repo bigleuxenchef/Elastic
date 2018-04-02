@@ -26,8 +26,8 @@ Here are my favorite
 ## Samples : Logstash configuration and Dashboard
 
 - [:eyes:OpenSpan RDA](./Samples/OpenSpan/README.md)
-- [:eyes:Xml files](./Logstash-Beats-Samples/logstash-xml.md) Highlights on plugins : `multiline`, `xml`, `input file`
-- [Dynatrace aggregation stats](./Logstash-Beats-Samples/Dynatrace/README.md)  : `xslt`, `ruby`, `date plugin from unix format`
+- [:eyes:Xml files](https://github.com/bigleuxenchef/Logstash-Beats-Samples) Highlights on plugins : `multiline`, `xml`, `input file`
+- [Dynatrace aggregation stats](https://github.com/bigleuxenchef/Logstash-Beats-Samples/tree/master/Dynatrace)  : `xslt`, `ruby`, `date plugin from unix format`
 
 
 # Favourites tools to consider
