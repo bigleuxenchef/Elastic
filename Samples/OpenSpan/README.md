@@ -5,7 +5,6 @@ The genesis of this use case happened during a demo of the capability of Elastic
 
 I must admit the most challenging part was to install and learn OpenSpan overnight, go through the tutorial and build a valid use case to generate enough data to demonstrate the concept. The last part was to explore how technically the data is produced and what can be done with it in elastic. 
 
-
 # The Logs
 
 To my surprise, OpenSpan was generating a huge amount of data even in the context of RDA which in nature is not a server based application. The flexibility while building the bot to create, generate additional logs was highlily flexible, which for a demo add to the complexity of building something fast and relevant. This is why I integrated two log files, one that I enable myself in OpenSpan ([CRM_E_CRMfrmLogin_Created.log](./CRM_E_CRMfrmLogin_Created.log)) and the other one that exist in OpenSpan ([RuntimeLog.txt](./RuntimeLog.txt)).
@@ -24,18 +23,7 @@ List of features used in this example :
 - Date plugin to create a timestamp field from a date/time text
 - Ruby scripting, this will allow to capture a once off date that will be needed to be amalgamate with the time stamp of each record to contruct a full time stamp : Date + Time.
 
-
-
-
-
 # The Dashboard
 
-
-<p align="center">
 <img src="./Images/KibanaOpenSpanDashboard.png" width=100%>
 </p>
-
-
-
--
-
