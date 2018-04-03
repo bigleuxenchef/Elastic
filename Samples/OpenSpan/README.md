@@ -1,4 +1,4 @@
-#Background
+# Background
 
 The genesis of this use case happened during a demo of the capability of Elastic in the context of Robotic Process Automation for Blueprism. The group was very interested in exploring whether such capability could be deployed with their own RDA/RPA tool : OpenSpan. The challenge was addressed overnight. The team expressed some doubt about the ease of doing same for OpenSpan as for BluePrism, people were highlighting the lack of logs and data. Being in IT for quite some time, I have very little  doubt about the ability of modern softwares to generate a lot of data even though sometime I am suprise about the way it is done. I took the challenge and for me it was not about doing it eventually, it was about doing it fast, having something done the next day morning was the whole point!
 

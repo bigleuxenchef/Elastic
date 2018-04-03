@@ -28,6 +28,7 @@ Here are my favorite
 - [:eyes:OpenSpan RDA](./Samples/OpenSpan/README.md)
 - [:eyes:Xml files](https://github.com/bigleuxenchef/Logstash-Beats-Samples/blob/master/logstash-xml.md) Highlights on plugins : `multiline`, `xml`, `input file`
 - [:eyes:Dynatrace aggregation stats](https://github.com/bigleuxenchef/Logstash-Beats-Samples/tree/master/Dynatrace)  : `xslt`, `ruby`, `date plugin from unix format`
+- [:eye: Filebeat samples](https://github.com/bigleuxenchef/Logstash-Beats-Samples/tree/master/filebeat) : `worker`,`bulk_size`,`multi-prospectors`,`performance`
 
 
 # Favourites tools to consider
