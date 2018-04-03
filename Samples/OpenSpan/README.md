@@ -9,6 +9,8 @@ I must admit the most challenging part was to install and learn OpenSpan overnig
 
 To my surprise, OpenSpan was generating a huge amount of data even in the context of RDA which in nature is not a server based application. The flexibility while building the bot to create, generate additional logs was highlily flexible, which for a demo add to the complexity of building something fast and relevant. This is why I integrated two log files, one that I enable myself in OpenSpan ([CRM_E_CRMfrmLogin_Created.log](./CRM_E_CRMfrmLogin_Created.log)) and the other one that exist in OpenSpan ([RuntimeLog.txt](./RuntimeLog.txt)).
 
+> Note : in this example only `RuntimeLog.txt` has been used but you may want to look at OpenSpan logs confirmation in greater details [:eye:here](./OpenSpan-logs.md)
+
 > OpenSpan is only running on windows, by default the logs are located under `C:\Users\<user>\AppData\Roaming\OpenSpan\`
 > The configuration of the standard logs in openspan is very similar to `log4j', it can be configured at runtime. 
 
