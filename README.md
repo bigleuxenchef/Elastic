@@ -26,7 +26,7 @@ Here are my favorite
 ## Samples : Logstash configuration and Dashboard
 
 - [:eyes:OpenSpan RDA - rapid dashboard development](./Samples/OpenSpan/README.md)
-- [:eye: OpenSpan RDA - Deeper logs analysis]
+- [:eye: OpenSpan RDA - logs publisher type](./Samples/OpenSpan/OpenSpan-logs.md)
 - [:eyes:Xml files](https://github.com/bigleuxenchef/Logstash-Beats-Samples/blob/master/logstash-xml.md) Highlights on plugins : `multiline`, `xml`, `input file`
 - [:eyes:Dynatrace aggregation stats](https://github.com/bigleuxenchef/Logstash-Beats-Samples/tree/master/Dynatrace)  : `xslt`, `ruby`, `date plugin from unix format`
 - [:eye: Filebeat samples](https://github.com/bigleuxenchef/Logstash-Beats-Samples/tree/master/filebeat) : `worker`,`bulk_size`,`multi-prospectors`,`performance`
