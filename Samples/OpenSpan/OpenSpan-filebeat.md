@@ -79,7 +79,9 @@ output.logstash:
   # Client Certificate Key
   #ssl.key: "/etc/pki/client/cert.key"
 ```
+
 Configuration on `logstash` side:
+
 ```yaml
 input {
   beats {
@@ -100,16 +102,16 @@ if [source] =~ /Runtime_Log4Net.txt/
   {
 #(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)
 	grok {
-        	  match => ["message","(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)"]
+          match => ["message","(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)"]
 
-        }	
+        }
     if [date]
      {
        date {
         # 2018-04-01 16:30:36,199
-          match => ["date","yyyy-MM-dd HH:mm:ss,SSS"]
-	  target => "date"
-         }
+        match => ["date","yyyy-MM-dd HH:mm:ss,SSS"]
+        target => "date"
+        }
     }
 }
 ```
