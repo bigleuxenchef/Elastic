@@ -93,6 +93,31 @@ input {
 
 As highlighted above we will provide the two filter to ingest either *RuntimeLog.txt* or *Runtime_Log4Net.txt*.
 
+here is the example of mapping for the file *Runtime_Log4Net.txt*
+
+```yaml
+if [source] =~ /Runtime_Log4Net.txt/
+  {
+#(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)
+	grok {
+        	  match => ["message","(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)"]
+
+        }	
+    if [date]
+     {
+       date {
+        # 2018-04-01 16:30:36,199
+          match => ["date","yyyy-MM-dd HH:mm:ss,SSS"]
+	  target => "date"
+         }
+    }
+}
+```
+
+to test such a regular expression you may use elastic dev dools the following way :
+
+![Grok-debugger](./Images/Grok-debugger.png)
+
 
 ## Other consideration : using Kafka
 
