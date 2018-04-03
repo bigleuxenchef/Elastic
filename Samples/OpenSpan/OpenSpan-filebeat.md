@@ -101,7 +101,7 @@ here is the example of mapping for the file *Runtime_Log4Net.txt*
 if [source] =~ /Runtime_Log4Net.txt/
   {
 #(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)
-	grok {
+grok {
           match => ["message","(?<type>(.*?))[ ]+[|]?[ ]*(?<date>%{YEAR}-%{MONTHNUM}-%{MONTHDAY}[T ]%{HOUR}:?%{MINUTE}(?::?%{SECOND})?)[ ]+[|]?[ ]+(?<thread>[0-9|\w]+)[ ]+[|]?[ ]+(?<TID>[0-9]+)[ ]+[|]?[ ]+(?<PID>[0-9]+)[ ]+[|]?[ ]+(?<State>\w+)[ ]+[|]?[ ](?<Category>[\w+ ]*)[ ]+[|]?[ ](?<DesignComponent>[\w+ -]*)[ ]+[|]?[ ](?<Component>[\w+ -]*)[ ]+[|]?[ ](?<Message>.*?$)"]
 
         }
