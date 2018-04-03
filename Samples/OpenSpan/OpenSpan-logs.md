@@ -20,7 +20,10 @@ There are 4 types of publisher in OpenSpan as depicted in the snippet above , le
 
 - File publisher `OpenSpan.Diagnostics.Publishers.FilePublisher`, this generates a sample like [:eye:here](./logs/RuntimeLog.txt)
 - Log4Net `OpenSpan.Diagnostics.Publishers.Log4NetPublisher`, this generates a sample like [:eye:here](./logs/Runtime_Log4Net.txt)
-## Explose key parameters
+
+## Explore key parameters for Log4Net
+
+> Note: here under you have a pretty look at the content of the field `InnerXml` of the publisher for Log4Net, you will see how you can change the configuration for the size of the log file as well as the roll definition such as number of file.
 
 ```xml
 
@@ -51,13 +54,3 @@ There are 4 types of publisher in OpenSpan as depicted in the snippet above , le
 	<appender-ref ref='RollingFileAppender' />
 </root>
 ```
-
-### Rolling log configuration
-
-
-### Number of log file
-
-
-### Size of each log file
-
-In order to avoid file to grow beyond reason, the maximum size allocated to a log file before it rolls over can be setup at the publisher level by setting the options : `
