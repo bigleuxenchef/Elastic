@@ -48,7 +48,7 @@ Here is the configuration of filebeat to manage multiline output for the same lo
   multiline.match: after
 ```
 
-## `fileBeat` elastic monitoring
+## `filebeat` elastic monitoring
 `
 `filebeat` monitoring means, visualizing system level information about how each `filebeat` instance is performing.
 
