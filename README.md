@@ -21,6 +21,8 @@ Here are my favorite
 - [:eyes:Elastic Delete duplicates with logstash](./DeleteDuplicates/LogstashDeleteSample.md)
 - [:eyes:Elastic rename index](./Rename-Copy%20indexes/elk_rename_index.sh.md)
 - [:eyes:Installing x-pack offline](./Installingxpackoffline.md)
+- [:eyes:Installing plug-ins offline](./elasticplugins.md)
+
 - [Scripting]
 
 ## Samples : Logstash configuration and Dashboard
