@@ -6,14 +6,14 @@
 
 ## Download x-pack
 
-```
+```text
 https://artifacts.elastic.co/downloads/packs/x-pack/x-pack-<version>.zip
 
 ```
 
 ## Install x-pack
 
-```
+```bash
 # X-pack is same for kibana, elasticsearch and logstash
 
 elasticsearch> .\bin\elasticsearch-plugin.bat install file:///Downlo
