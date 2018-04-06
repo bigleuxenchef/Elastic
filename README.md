@@ -1,29 +1,17 @@
-Tooling
-=======
 
-Here are my favorite
-
-* `vi` :punch: `gvim` :punch:
-* regular expression :punch:
-* `bash.sh` :punch: `powershell` :-1: (no escape on windows)
-* VisualVM, jconsole, Java Mission Control : all free and help profiling JVM even remotely from unix to windows :joy: (try my best to escape spending time on windows :alien:)
-* Postman for submitting CURL request and replay infinitely.
-* SQL Workbench to access MSSQL (even from unix let's your :boot: away of  :poop: :smirk:
-)
-
-# List of topics
+# List of topics related to elastic
 
 ## Integration
 
 - [:eyes:Elastic in R-CRAN](https://github.com/bigleuxenchef/R-Elastic)
+
 
 ## Utilities
 - [:eyes:Elastic Delete duplicates with logstash](./DeleteDuplicates/LogstashDeleteSample.md)
 - [:eyes:Elastic rename index](./Rename-Copy%20indexes/elk_rename_index.sh.md)
 - [:eyes:Installing x-pack offline](./Installingxpackoffline.md)
 - [:eyes:Installing plug-ins offline](./elasticplugins.md)
-
-- [Scripting]
+- [:eyes:Elastic Query & Aggregation](./elastic-querying.md)
 
 ## Samples : Logstash configuration and Dashboard
 
@@ -38,6 +26,13 @@ Here are my favorite
 
 # Favourites tools to consider
 
-- Postman for rest command
+Here are my favorite
+
+* `vi` :punch: `gvim` :punch:
+* regular expression :punch:
+* `bash.sh` :punch: `powershell` :-1: (no escape on windows)
+* VisualVM, jconsole, Java Mission Control : all free and help profiling JVM even remotely from unix to windows :joy: (try my best to escape spending time on windows :alien:)
+* Postman for submitting CURL request and replay infinitely.
+* SQL Workbench to access MSSQL (even from unix let's your :boot: away of  :poop: :smirk:)
 - Kibana/DevTools/GrokDebugger 
 - [:eyes:regex101.com](https://regex101.com) [:eyes:regexr.com](https://regexr.com)
