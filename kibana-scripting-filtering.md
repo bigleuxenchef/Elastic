@@ -19,7 +19,7 @@ Here are the steps:
 
 
 
-<img src="./images/kibana_2.png" width=100% align="middle" >
+<img src="./Images/kibana_2.png" width=100% align="middle" >
 
 
 Notes
@@ -29,7 +29,7 @@ Notes
 1. The Metric at the very top has been disable/hidden from the display but it needs to be there as it is the *sibling pipeline*, without it nothing would be "pipelined" to the aggregation metrics.
 2. Have a look to the filter here under that can help filtering the data really needed in the pipeline, it is not mandatory to make it work but in some cases, not removing noise data can generate undesired results.
 
-<img src="./images/kibana_3.png" width=50% align="middle" >
+<img src="./Images/kibana_3.png" width=50% align="middle" >
 
 
 To make sure to take records only for the *Start* and *End*
@@ -53,7 +53,7 @@ The simplest way is to use average function and a script like as follow :
 
 Here is what the result is :
 
-<img src="./images/kibana_4.png" width=100% align="middle" >
+<img src="./Images/kibana_4.png" width=100% align="middle" >
 
 
 
