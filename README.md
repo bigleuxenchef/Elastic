@@ -12,6 +12,7 @@
 - [:eyes:Installing x-pack offline](./Installingxpackoffline.md)
 - [:eyes:Installing plug-ins offline](./elasticplugins.md)
 - [:eyes:Elastic Query & Aggregation](./elastic-querying.md)
+- [:eyes:Kibana Scripting](./kibana-scripting-filtering.md)
 
 ## Samples : Logstash configuration and Dashboard
 
