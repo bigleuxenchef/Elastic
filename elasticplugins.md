@@ -1,7 +1,19 @@
+
+<!-- TOC -->
+
+- [List of Plugins](#list-of-plugins)
+    - [Elasticsearch plugins](#elasticsearch-plugins)
+    - [Kibana plugins](#kibana-plugins)
+    - [Logstash plugins](#logstash-plugins)
+        - [server-side (optional for blueprism, required for openspan in case of using filebeat)](#server-side-optional-for-blueprism-required-for-openspan-in-case-of-using-filebeat)
+        - [Client side (on windows when using `blueprism` or `openspan`)](#client-side-on-windows-when-using-blueprism-or-openspan)
+    - [Notes](#notes)
+
+<!-- /TOC -->
+
 # List of Plugins
 
 here under you will find the list of plugins installed for running elastic sandbox to cover all sample under this repository. As what is included standard with either `elasticsearch`, `kibana` or `logstash`, we will give a snapshot that can travel with us along the different versions.
-
 
 ## Elasticsearch plugins
 
@@ -22,6 +34,7 @@ x-pack-security
 x-pack-upgrade
 x-pack-watcher
 ```
+
 ## Kibana plugins
 
 Only x-pack is mandatory, the other one are listed as it has been tested with the integration of other plugin.
@@ -147,7 +160,7 @@ x-pack
 
 the one really important to check if they are included are :
 
-```
+```bash
 logstash-input-jdbc
 logstash-filter-grok
 logstash-filter-xml
@@ -265,7 +278,7 @@ x-pack
 
 An error can be generated when using `<logstash|elasticsearch|kibana>-plugin list` if something unexpected is stored by accident in plugins directory. In this case here under, if it happens that you browse the directory with `Finder` on osx, it may create a dile `.DS_Store` can conflict with plugins. MAke sure to keep it clear.
 
-```bash
+```java
 bin/elasticsearch-plugin list
 .DS_Store
 Exception in thread "main" java.nio.file.FileSystemException: /usr/local/Cellar/elasticsearch/6.2.1/libexec/plugins/.DS_Store/plugin-descriptor.properties: Not a directory
