@@ -24,6 +24,7 @@
 
 - [:eye: Filebeat samples](https://github.com/bigleuxenchef/Logstash-Beats-Samples/tree/master/filebeat) : `worker`,`bulk_size`,`multi-prospectors`,`performance`
 - [:eyes: OpenSpan RDA - Filebeat implementation](./Samples/OpenSpan/OpenSpan-filebeat.md)
+- [:eyes: Blueprism RPA](./Samples/OpenSpan/OpenSpan-filebeat.md)
 
 # Favourites tools to consider
 

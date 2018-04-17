@@ -29,3 +29,6 @@ List of features used in this example :
 
 <img src="./Images/KibanaOpenSpanDashboard.png" width=100%>
 </p>
+
+# `Filebeat` implementation
+- [:eyes: OpenSpan RDA - Filebeat implementation](./OpenSpan-filebeat.md)
