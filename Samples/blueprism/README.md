@@ -38,7 +38,7 @@ Each time a error happens (like the  :bomb:), an alert is generated using the wa
 
 - Vega Visualization
 - Visual builder including annotation
-- Kibana visualization including scription features
+- Kibana visualization including scripting features
 
 
 Watcher code looks like 
@@ -122,7 +122,7 @@ Elasticsearch.yml configuration for watcher
 #            user: '<gmailaccount>@gmail.com'
 #            password: '<to be generated>'
 
-# MAke sure that once the message was generated, it will not for another 5 min. 
+# Make sure that once the message was generated, it will not for another 5 min. 
 # xpack.watcher.execution.default_throttle_period: 5m
 
 ```
