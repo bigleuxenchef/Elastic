@@ -12,7 +12,7 @@ The final product is made of 5 dashboards :
 
 - Heatmap
 
-<img src="./Images/Heatmap.png" width=100%>
+<img src="./Images/heatmap.png" width=100%>
 
 - Management Dashboard
 
