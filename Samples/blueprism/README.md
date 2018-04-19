@@ -132,9 +132,26 @@ Vega Visualization looks like
 ```
 {
   "$schema": "https://vega.github.io/schema/vega/v3.json",
+  "padding": {"bottom": 50},
   "signals": [
-    {"name": "layout", "value": "squarify", "bind": {"input": "select", "options": ["squarify", "binary", "slicedice"]}},
-    {"name": "aspectRatio", "value": 1.6, "bind": {"input": "range", "min": 0.2, "max": 5, "step": 0.1}}
+    {
+      "name": "layout",
+      "value": "squarify",
+      "bind": {
+        "input": "select",
+        "options": ["squarify", "binary", "slicedice"]
+      }
+    },
+    {
+      "name": "aspectRatio",
+      "value": 1.6,
+      "bind": {"input": "range", "min": 0.2, "max": 5, "step": 0.1}
+    },
+    {
+      "name": "cornerRadius",
+      "value": 20,
+      "bind": {"input": "range", "min": 0, "max": 50, "step": 1}
+    }
   ],
   "data": [
     {
@@ -151,13 +168,36 @@ Vega Visualization looks like
               "aggs": {
                 "seqnum": {
                   "filter": {"term": {"seqnum": 1}},
-                  "aggregations": {"the_count": {"value_count": {"field": "seqnum"}}}
+                  "aggregations": {
+                    "the_count": {"value_count": {"field": "seqnum"}}
+                  }
                 },
                 "error": {
                   "filter": {
-                    "query_string": {"analyze_wildcard": true, "default_field": "*", "query": "result:\"?ERROR*\""}
+                    "query_string": {
+                      "analyze_wildcard": true,
+                      "default_field": "*",
+                      "query": "result:\"?ERROR*\""
+                    }
                   },
-                  "aggregations": {"the_count": {"value_count": {"field": "result.keyword"}}}
+                  "aggs": {
+                    "Process_On_Error_count": {
+                      "cardinality": {"field": "sessionnumber"}
+                    }
+                  }
+                },
+                "Terminated": {
+                  "filter": {
+                    "query_string": {
+                      "fields": ["status"],
+                      "query": "status:Terminated"
+                    }
+                  },
+                  "aggs": {
+                    "Terminated_count": {
+                      "cardinality": {"field": "sessionnumber"}
+                    }
+                  }
                 }
               }
             }
@@ -168,8 +208,17 @@ Vega Visualization looks like
       "transform": [
         {"type": "formula", "as": "parent", "expr": "1"},
         {"type": "formula", "as": "depth", "expr": "2"},
-        {"type": "formula", "as": "size", "expr": "datum.doc_count"},
-        {"type": "formula", "as": "severity", "expr": "datum.error.doc_count/datum.doc_count"},
+        {"type": "formula", "as": "size", "expr": "datum.seqnum.doc_count"},
+        {
+          "type": "formula",
+          "as": "severity",
+          "expr": "min(19*(datum.Terminated.Terminated_count.value/datum.seqnum.doc_count)+5*(datum.error.Process_On_Error_count.value/datum.seqnum.doc_count),19)"
+        },
+        {
+          "type": "formula",
+          "as": "density",
+          "expr": "min((datum.Terminated.Terminated_count.value/datum.seqnum.doc_count)+(datum.error.doc_count/datum.seqnum.doc_count),20)"
+        },
         {"type": "formula", "as": "name", "expr": "datum.key"},
         {
           "type": "impute",
@@ -191,38 +240,58 @@ Vega Visualization looks like
         }
       ]
     },
-    {"name": "nodes", "source": "tree", "transform": [{"type": "filter", "expr": "datum.children"}]},
-    {"name": "leaves", "source": "tree", "transform": [{"type": "filter", "expr": "!datum.children"}]}
+    {
+      "name": "nodes",
+      "source": "tree",
+      "transform": [{"type": "filter", "expr": "datum.children"}]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [{"type": "filter", "expr": "!datum.children"}]
+    }
   ],
   "scales": [
     {
       "name": "color",
-      "type": "ordinal",
+      "type": "sequential",
+      "domain": [0, 19],
+      "clamp": true,
       "range": [
-        "#3182bd",
-        "#6baed6",
-        "#9ecae1",
-        "#c6dbef",
-        "#e6550d",
-        "#fd8d3c",
-        "#fdae6b",
-        "#fdd0a2",
         "#31a354",
-        "#74c476",
-        "#a1d99b",
-        "#c7e9c0",
-        "#756bb1",
-        "#9e9ac8",
-        "#bcbddc",
-        "#dadaeb",
-        "#636363",
-        "#969696",
-        "#bdbdbd",
-        "#d9d9d9"
+        "#fee4cd",
+        "#fdc99b",
+        "#fdae6b",
+        "#fca04f",
+        "#fc851d",
+        "#e26b03",
+        "#b05303",
+        "#7e3c02",
+        "#fdae6b",
+        "#ffcccc",
+        "#ffcccc",
+        "#ff9999",
+        "#ff9999",
+        "#ff6666",
+        "#ff6666",
+        "#ff3333",
+        "#ff3333",
+        "#ff0000",
+        "#ff0000"
       ]
     },
-    {"name": "size", "type": "ordinal", "domain": [0, 1, 2, 3], "range": [20, 20, 20, 14]},
-    {"name": "opacity", "type": "ordinal", "domain": [0, 1, 2, 3], "range": [0.15, 0.5, 0.8, 1]}
+    {
+      "name": "size",
+      "type": "ordinal",
+      "domain": [0, 1, 2, 3],
+      "range": [14, 16, 20, 28]
+    },
+    {
+      "name": "opacity",
+      "type": "ordinal",
+      "domain": [0, 1, 2, 3],
+      "range": [0.3, 0.5, 0.8, 1]
+    }
   ],
   "marks": [
     {
@@ -232,22 +301,29 @@ Vega Visualization looks like
       "encode": {
         "enter": {
           "fill": {"scale": "color", "field": "severity"},
-          "fillOpacity": {"scale": "opacity", "field": "error.doc_count"}
+          "fillOpacity": {"scale": "opacity", "field": "density"}
         },
-        "update": {"x": {"field": "x0"}, "y": {"field": "y0"}, "x2": {"field": "x1"}, "y2": {"field": "y1"}}
+        "update": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "cornerRadius": {"signal": "cornerRadius"}
+        }
       }
     },
     {
       "type": "rect",
       "from": {"data": "leaves"},
       "encode": {
-        "enter": {"stroke": {"value": "#fff"}},
+        "enter": {"stroke": {"value": "#fff"}, "cornerRadius": 10},
         "update": {
           "x": {"field": "x0"},
           "y": {"field": "y0"},
           "x2": {"field": "x1"},
           "y2": {"field": "y1"},
-          "fill": {"value": "transparent"}
+          "fill": {"value": "transparent"},
+          "cornerRadius": {"signal": "cornerRadius"}
         },
         "hover": {"fill": {"value": "green"}}
       }
@@ -266,7 +342,10 @@ Vega Visualization looks like
           "fontSize": {"scale": "size", "field": "depth"},
           "fillOpacity": {"scale": "opacity", "field": "depth"}
         },
-        "update": {"x": {"signal": "0.5 * (datum.x0 + datum.x1)"}, "y": {"signal": "0.5 * (datum.y0 + datum.y1)"}}
+        "update": {
+          "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+          "y": {"signal": "0.5 * (datum.y0 + datum.y1)"}
+        }
       }
     }
   ]
