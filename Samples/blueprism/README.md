@@ -1,4 +1,11 @@
 
+---
+Title | Author | Date 
+---|---|---
+blueprism Management Dashboard |  | ** April 2018**
+---
+
+
 <!-- TOC -->
 
 - [Background](#background)
@@ -373,6 +380,14 @@ Code for heatmap :
 ### Standard Kibana Visualization
 
 #### Heatmap
+
+Features implemented in the heatmap are :
+
+- highlight the number of processes that have been terminated in blueprism rather than completed.
+- highlight the number of error messages encountered for each process
+- Highlight whenever a process is ran manually
+- Finally sort the heatmap in a way that the top process with the most problem are listed first. This will avoid if we have more than 10 process that the system will pick and chose the wrong one or just sort by the name of the process. In this case we would like to give a weight to the process having errors and sort using that weight. The magic is described in the pictures here below.
+
 <p float="left">
 <img src="./Images/kibana-heatmap-1.png" width=10%><img src="./Images/kibana-heatmap-2.png" width=65%>
 </p>
