@@ -374,7 +374,7 @@ Code for heatmap :
 
 #### Heatmap
 <p float="left">
-<img src="./Images/kibana-heatmap-1.png" width=10%><img src="./Images/kibana-heatmap-2.png" width=68%>
+<img src="./Images/kibana-heatmap-1.png" width=10%><img src="./Images/kibana-heatmap-2.png" width=65%>
 </p>
 
 
