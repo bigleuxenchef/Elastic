@@ -373,9 +373,33 @@ Code for heatmap :
 ### Standard Kibana Visualization
 
 #### Heatmap
-<div>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+</head>
+<body>
+<div class="row">
 <img src="./Images/kibana-heatmap-1.png" width=20%><img src="./Images/kibana-heatmap-2.png" width=100%>
 </div>
 
+</body>
+</html>
 
 
