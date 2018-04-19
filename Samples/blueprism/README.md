@@ -1,3 +1,16 @@
+
+<!-- TOC -->
+
+- [Background](#background)
+    - [Final product](#final-product)
+    - [Features](#features)
+        - [Watcher](#watcher)
+        - [Vega Visualization](#vega-visualization)
+        - [Standard Kibana Visualization](#standard-kibana-visualization)
+            - [Heatmap](#heatmap)
+
+<!-- /TOC -->
+
 # Background
 
 This use case was about building dashboard and monitoring for blueprism in addition to the control room and logging capability in Blueprism.
@@ -40,6 +53,7 @@ Each time a error happens (like the  :bomb:), an alert is generated using the wa
 - Visual builder including annotation
 - Kibana visualization including scripting features
 
+### Watcher
 
 Watcher code looks like 
 
@@ -127,8 +141,11 @@ Elasticsearch.yml configuration for watcher
 
 ```
 
-Vega Visualization looks like
-=====
+
+### Vega Visualization
+
+Code for heatmap :
+
 ```
 {
   "$schema": "https://vega.github.io/schema/vega/v3.json",
@@ -353,5 +370,12 @@ Vega Visualization looks like
 ```
 
 
-Interesting scripting samples
-======
+### Standard Kibana Visualization
+
+#### Heatmap
+<div>
+<img src="./Images/kibana-heatmap-1.png" width=20%><img src="./Images/kibana-heatmap-2.png" width=100%>
+</div>
+
+
+
