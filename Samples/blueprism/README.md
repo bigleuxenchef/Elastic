@@ -2,7 +2,7 @@
 ---
 Title | Author | Date 
 ---|---|---
-blueprism Management Dashboard |  | ** April 2018**
+blueprism Management Dashboard | | ** April 2018**
 ---
 
 
