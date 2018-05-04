@@ -13,6 +13,7 @@
 - [:eyes:Installing plug-ins offline](./elasticplugins.md)
 - [:eyes:Elastic Query & Aggregation](./elastic-querying.md)
 - [:eyes:Kibana Scripting](./kibana-scripting-filtering.md)
+- [:eyes:APM](./APM.md)
 
 ## Samples : Logstash configuration and Dashboard
 
