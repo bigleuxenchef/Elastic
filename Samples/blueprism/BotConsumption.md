@@ -14,4 +14,3 @@ Combining the data from *metricbeat* and *blueprism* can provide lots of insight
 This dashboard provides a macro view of what is going on with regards to blueprism as well as all the VM running underneath. This is where the fun start, the same dashboard that is used as macro view can be easily focusing on one particular machine by leveraging the built-in capabilities of kibana/elastic such as :
 
 <img src="./Images/BotConsumption-one-bot.png" width=100%>
-
