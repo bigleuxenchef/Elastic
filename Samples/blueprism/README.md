@@ -15,6 +15,7 @@ blueprism Management Dashboard | | ** April 2018**
         - [Vega Visualization](#vega-visualization)
         - [Standard Kibana Visualization](#standard-kibana-visualization)
             - [Heatmap](#heatmap)
+        - [👀[Extended feature : bot utilization](./BotConsumption.md)](#👀extended-feature--bot-utilizationbotconsumptionmd)
 
 <!-- /TOC -->
 
@@ -391,5 +392,7 @@ Features implemented in the heatmap are :
 <p float="left">
 <img src="./Images/kibana-heatmap-1.png" width=10%><img src="./Images/kibana-heatmap-2.png" width=65%>
 </p>
+
+### 👀[Extended feature : bot utilization](./BotConsumption.md)
 
 
