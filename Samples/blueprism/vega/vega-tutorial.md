@@ -86,12 +86,12 @@ Here is the data part :
  
 "config": {
     "axis": {
-        "grid": true, # true or false will show or hide the grid
-        "tickSize": 10, # define the length of the tick on the axis
+        "grid": true, // true or false will show or hide the grid
+        "tickSize": 10, //define the length of the tick on the axis
         "labelFont": "Monaco, Courier New",
         "titleFont" : "Monaco, Courier New",
         "titleFontSize": 18,
-        "titlePadding" : 5 # define the distance between the title and the axis
+        "titlePadding" : 5 // define the distance between the title and the axis
   }
   ```
 
