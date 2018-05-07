@@ -12,7 +12,7 @@ In vega the data can be in excel, in json or it can even be the result to a call
 
 In order to get the number of document per elasticsearch indice, let's run the following query
 
-```json
+```javascript
 # let's consider the following query where we try to get the number of document per index
 GET _all/_search
 {"size": 0,
@@ -28,7 +28,7 @@ GET _all/_search
 
 here is the output 
 
-```json
+```javascript
 {
   "took": 476,
   "timed_out": false,
@@ -99,7 +99,7 @@ here is the output
 
 When looking at the example above, we can define the output the following way :
 
-```json
+```javascript
 {
  { /* information on query execution */}
  
@@ -119,7 +119,7 @@ When looking at the example above, we can define the output the following way :
 
 from there if ww would like to access the element of the result set, we need to indicate to vega the path to the result set the following way :
 
-```json
+```javascript
 "format": {"property": "aggregations.index_volume.buckets"}
 ```
 
@@ -127,7 +127,7 @@ from there if ww would like to access the element of the result set, we need to 
 
 This is perhaps where the value of elastic aggregation syntax gets very powerful. Lots of people found the syntax very difficult, however this allow managing pipeline very well. In other words, it is easy for `kibana` to add the context (e.g. time range filter) to refine the visualization to the context being setup. this is done the following way :
 
-```json
+```javascript
 "data": {
     "name": "table", // define the name of the data set for further reference in vega toolkit
     "url": {
