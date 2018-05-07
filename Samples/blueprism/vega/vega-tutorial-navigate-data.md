@@ -153,3 +153,185 @@ Here are two examples showing the impact of `%context%` setting, when it is fals
 <img src="./Images/vega-tutorial-bar-chart-context-false.png" width=40%>
 <img src="./Images/vega-tutorial-bar-chart-context-true.png" width=40%>
 </p>
+
+
+## The simplest code
+
+```javascript
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.json",
+
+  "data": {
+    "name": "table",
+    "url": {
+      "%context%": true,
+      "%timefield%": "@timestamp",
+      "index": "_all",
+      "body": {
+        "aggs": {"index_volume": {"terms": {"field": "_index"}}},
+        "size": 0
+      }
+    },
+    "format": {"property": "aggregations.index_volume.buckets"},
+  },
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "band",
+      "range": "width",
+      "domain": {"data": "table", "field": "key"}
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "range": "height",
+      "nice": true,
+      "domain": {"data": "table", "field": "doc_count"}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "key"},
+      "range": {"scheme": "category20"}
+    }
+  ],
+  "axes": [
+    {
+      "orient": "bottom",
+      "scale": "xscale",
+      "encode": {
+        "labels": {
+          "update": {
+            "angle": {"value": 50},
+            "align": {"value": "left"},
+            "baseline": {"value": "middle"}
+          }
+        }
+      }
+    },
+    {"orient": "left", "scale": "yscale"}
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "xscale", "field": "key"},
+          "width": {"scale": "xscale", "band": 1},
+          "y": {"scale": "yscale", "field": "doc_count"},
+          "y2": {"scale": "yscale", "value": 0}
+        }
+      }
+    }
+  ]
+}
+```
+
+## Adding tooltip
+
+```javascript
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.json",
+  "signals": [
+    {
+      "name": "tooltip",
+      "value": {},
+      "on": [
+        {"events": "rect:mouseover", "update": "datum"},
+        {"events": "rect:mouseout", "update": "{}"}
+      ]
+    }
+  ],
+  "data": {
+    "name": "table",
+    "url": {
+      "%context%": true,
+      "%timefield%": "@timestamp",
+      "index": "_all",
+      "body": {
+        "aggs": {"index_volume": {"terms": {"field": "_index"}}},
+        "size": 0
+      }
+    },
+    "format": {"property": "aggregations.index_volume.buckets"},
+  },
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "band",
+      "range": "width",
+      "domain": {"data": "table", "field": "key"}
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "range": "height",
+      "nice": true,
+      "domain": {"data": "table", "field": "doc_count"}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "key"},
+      "range": {"scheme": "category20"}
+    }
+  ],
+  "axes": [
+    {
+      "orient": "bottom",
+      "scale": "xscale",
+      "encode": {
+        "labels": {
+          "update": {
+            "angle": {"value": 50},
+            "align": {"value": "left"},
+            "baseline": {"value": "middle"}
+          }
+        }
+      }
+    },
+    {"orient": "left", "scale": "yscale"}
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "xscale", "field": "key"},
+          "width": {"scale": "xscale", "band": 1},
+          "y": {"scale": "yscale", "field": "doc_count"},
+          "y2": {"scale": "yscale", "value": 0}
+        },
+        "update": {"fill": {"value": "steelblue"}},
+        "hover": {"fill": {"value": "red"}}
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "align": {"value": "center"},
+          "baseline": {"value": "bottom"},
+          "fill": {"value": "#333"}
+        },
+        "update": {
+          "x": {"scale": "xscale", "signal": "tooltip.key", "band": 0.5},
+          "y": {
+            "scale": "yscale",
+            "signal": "tooltip.doc_count",
+            "offset": -2
+          },
+          "text": {"signal": "tooltip.doc_count"},
+          "fillOpacity": [
+            {"test": "datum === tooltip", "value": 0.5},
+            {"value": 1}
+          ]
+        }
+      }
+    }
+  ]
+}
+
+```
