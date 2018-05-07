@@ -13,7 +13,7 @@ In vega the data can be in excel, in json or it can even be the result to a call
 In order to get the number of document per elasticsearch indice, let's run the following query
 
 ```javascript
-# let's consider the following query where we try to get the number of document per index
+// let's consider the following query where we try to get the number of document per index
 GET _all/_search
 {"size": 0,
   "aggs": {
