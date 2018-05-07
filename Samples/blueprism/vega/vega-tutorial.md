@@ -1,6 +1,7 @@
 # Vega tutorial : complete example
 
 here is the final product, you can see side by side when using the select option from the legend how it looks like:
+Chart represent during the time range selected the number of process run, if an error occurs in one of the run included in the circle, a red crown will be added. This chart leverage the aggregation capacility of electic where a circle will aggregate the number of processes run during the interval reported.
 
 <p float="left">
 <img src="./Images/vega-tutorial-final.png" width=40%>
