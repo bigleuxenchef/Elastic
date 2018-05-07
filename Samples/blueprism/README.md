@@ -394,6 +394,6 @@ Features implemented in the heatmap are :
 </p>
 
 ### Extended feature : bot utilization
-[:eyes:here](./BotConsumption.md)
-
+- [:eyes:here bot utilization](./BotConsumption.md)
+- [:eyes:here Vega Tutorial](./vega/vega-tutorial.md)
 
