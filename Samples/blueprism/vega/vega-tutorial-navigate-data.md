@@ -99,7 +99,8 @@ here is the output
 
 When looking at the example above, we can define the output the following way :
 
-```json
+```javascript
+{
  { /* information on query execution */}
  
   "aggregations": {
