@@ -1,12 +1,14 @@
 # Vega tutorial : complete example
 
-here is the final product :
+here is the final product, you can see side by side when using the select option from the legend how it looks like:
+
+<p float="left">
+<img src="./Images/vega-tutorial-final.png" width=40%>
+<img src="./Images/vega-tutorial-final-select.png" width=40%>
+</p>
 
 
-
-
-
-# Link the json to Vega
+## Link the json to Vega
 
 ```javascript
   "$schema": "https://vega.github.io/schema/vega/v3.json",
@@ -139,4 +141,50 @@ In vega, scales have different purposes, it is mandatory to have scales attached
     {"scale": "xscale", "orient": "bottom", "offset": {"value": 20}, "title": "Timeline"},
     {"scale": "yscale", "orient": "left", "offset": {"value": 20}, "title": "Number of Processes"}
   ]
+```
+
+## Adding a Legend
+
+
+```javascript
+"legends": [
+    {
+      "fill": "color",
+      "title": "Processes",
+      "encode": {
+        "title": {"update": {"fontSize": {"value": 14}}},
+        "symbols": {
+          "name": "legendSymbol",
+          "interactive": true,
+          "update": {
+            "strokeWidth": {"value": 0.8},
+            "stroke": {"value": "black"},
+            "opacity": [
+              {
+                "test": "!length(data('selected')) || indata('selected', 'value', datum.value)",
+                "value": 0.7
+              },
+              {"value": 0.15}
+            ],
+            "size": {"value": 194}
+          }
+        },
+        "labels": {
+          "name": "legendLabel",
+          "interactive": true,
+          "update": {
+            "fontSize": {"value": 12},
+            "fill": {"value": "black"},
+            "opacity": [
+              {
+                "test": "!length(data('selected')) || indata('selected', 'value', datum.value)",
+                "value": 1
+              },
+              {"value": 0.25}
+            ]
+          }
+        }
+      }
+    }
+  ],
 ```
