@@ -1,0 +1,282 @@
+[
+  {
+    "_id": "c2780050-3fcd-11e8-8163-03166dc40f58",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque process stats",
+      "visState": "{\"title\":\"La Banque process stats\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"bar_color_rules\":[{\"id\":\"9b5562b0-3fcd-11e8-a2ac-151292197ced\"}],\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"blueprism.process.completed-*\",\"interval\":\"auto\",\"pivot_id\":\"processprocessname.keyword\",\"pivot_label\":\"Process\",\"pivot_rows\":\"50\",\"series\":[{\"id\":\"7503bdc0-3fda-11e8-a054-a97d0dc7cd20\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"7503bdc1-3fda-11e8-a054-a97d0dc7cd20\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"#\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"89c85610-3fd2-11e8-a634-83b455efcca9\"}],\"fill\":0.5,\"filter\":\"seqnum:1\",\"formatter\":\"number\",\"id\":\"8518fed0-3fd2-11e8-a634-83b455efcca9\",\"line_width\":1,\"metrics\":[{\"id\":\"8518fed1-3fd2-11e8-a634-83b455efcca9\",\"type\":\"count\"}],\"point_size\":1,\"seperate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\",\"label\":\"# on Error\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"startdatetime\",\"type\":\"table\",\"filter\":\"\"},\"aggs\":[]}",
+      "uiStateJSON": "{\"table\":{\"sort\":{\"column\":\"4f84ad10-3fd1-11e8-a634-83b455efcca9\",\"order\":\"desc\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "c5626760-4180-11e8-9f9c-73ac8cda67d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Heartbeat without annotation",
+      "visState": "{\"title\":\"La Banque Heartbeat without annotation\",\"type\":\"metrics\",\"params\":{\"annotations\":[],\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"blueprism.process.completed-*\",\"interval\":\"auto\",\"markdown\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"rgba(174,186,160,1)\",\"fill\":\"0.5\",\"formatter\":\"number\",\"hide_in_legend\":1,\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"line_width\":\"1\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\",\"steps\":1}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"startdatetime\",\"type\":\"timeseries\",\"background_color\":null},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "a0fe7ab0-3fb6-11e8-9a47-e1cd085b3587",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Duration Average min max",
+      "visState": "{\"title\":\"La Banque Duration Average min max\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\",\"field\":\"processduration\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":\"1\",\"point_size\":1,\"fill\":\".2\",\"stacked\":\"stacked\",\"offset_time\":\"\",\"override_index_pattern\":1,\"series_index_pattern\":\"blueprism.process.completed-*\",\"series_interval\":\"auto\",\"series_time_field\":\"startdatetime\",\"terms_field\":\"processprocessname.keyword\",\"value_template\":\"{{value}}\",\"filter\":\"seqnum:1\",\"label\":\"Process duration\"},{\"id\":\"43bdf380-3fb6-11e8-b82d-8db6f31e3bae\",\"color\":\"rgba(242,202,192,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"sigma\":\"1\",\"id\":\"43bdf381-3fb6-11e8-b82d-8db6f31e3bae\",\"type\":\"std_deviation\",\"field\":\"processduration\",\"mode\":\"raw\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"3\",\"fill\":\"0.001\",\"stacked\":\"none\",\"label\":\"Process standard deviation\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"blueprism.process.completed-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":0,\"show_grid\":1,\"filter\":\"seqnum:1\",\"annotations\":[]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "9aa46fc0-3fad-11e8-ba97-edbc90a9fc1b",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process Execution",
+      "visState": "{\"title\":\"La Banque Process Execution\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":true,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"cardinal\",\"lineWidth\":3}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"startdatetime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"group\",\"params\":{\"field\":\"processprocessname.keyword\",\"size\":10}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b0799920-3eb2-11e8-b3b7-2bab3e85ddf0",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Mockup 3",
+      "visState": "{\"title\":\"La Banque Mockup 3\",\"type\":\"heatmap\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"colorSchema\":\"Green to Red\",\"colorsNumber\":3,\"colorsRange\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":1000000}],\"enableHover\":true,\"invertColors\":false,\"legendPosition\":\"right\",\"percentageMode\":false,\"setColorRange\":true,\"times\":[],\"type\":\"heatmap\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"color\":\"#FFFFFF\",\"rotate\":0,\"show\":true},\"scale\":{\"defaultYExtents\":false,\"type\":\"log\"},\"show\":false,\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"processprocessname.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"orderAgg\":{\"id\":\"2-orderAgg\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"orderAgg\",\"params\":{\"field\":\"seqnum\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Terminated/) return 1; if (!doc['result.keyword'].empty && doc['result.keyword'].value =~ /ERROR/) return 1; return 0;\\\"\\n }\\n\\n}\"}},\"order\":\"desc\",\"orderBy\":\"custom\",\"customLabel\":\"Process\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":\"status:Terminated AND seqnum:1\"},\"label\":\"Terminated\"},{\"input\":{\"query\":\"result:ERROR\"},\"label\":\"Error Messages\"},{\"input\":{\"query\":\"seqnum:1 AND -starterusername:Scheduler\"},\"label\":\"User Launch\"}]}}]}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"1 - 5\": \"#E5AC0E\",\n      \"12 - 23\": \"#E24D42\",\n      \"134 - 267\": \"#E5AC0E\",\n      \"267 - 400\": \"#BF1B00\",\n      \"334 - 667\": \"#E5AC0E\",\n      \"5 - 9,999\": \"#BF1B00\",\n      \"6 - 12\": \"#EAB839\",\n      \"667 - 1,000\": \"#E24D42\",\n      \"1 - 999\": \"#BF1B00\",\n      \"1 - 999,999\": \"#BF1B00\",\n      \"1 - 1,000,000\": \"#BF1B00\"\n    },\n    \"defaultColors\": {\n      \"0 - 1\": \"rgb(0,104,55)\",\n      \"1 - 1,000,000\": \"rgb(183,224,117)\"\n    },\n    \"legendOpen\": true\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"result.keyword\",\"value\":\"exists\"},\"exists\":{\"field\":\"result.keyword\"},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"status.keyword\",\"value\":\"exists\"},\"exists\":{\"field\":\"status.keyword\"},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e525aa00-3e40-11e8-889e-b7123f1fc23f",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Mockup 2",
+      "visState": "{\"title\":\"La Banque Mockup 2\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":true,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":true,\"rotate\":0,\"color\":\"#FFFFFF\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"seqnum\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['objectname.keyword'].value =~ /Login/) return 10; if (doc['objectname.keyword'].value =~ /Ran/) return 5; if (doc['objectname.keyword'].value =~ /Blue/) return 15;return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"System Health\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"processprocessname.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"System Health\"}}]}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"defaultColors\": {\n      \"0% - 25%\": \"rgb(255,255,204)\",\n      \"25% - 50%\": \"rgb(254,217,118)\",\n      \"50% - 75%\": \"rgb(253,141,60)\",\n      \"75% - 100%\": \"rgb(227,27,28)\"\n    },\n    \"colors\": {\n      \"0\": \"#3F6833\",\n      \"0% - 25%\": \"#3F6833\"\n    },\n    \"legendOpen\": false\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"result:\\\"?ERROR*\\\"\"}},\"meta\":{\"index\":\"blueprism.process.completed-*\",\"disabled\":true,\"alias\":null,\"type\":\"query_string\",\"key\":\"query\",\"value\":\"result:\\\"?ERROR*\\\"\",\"negate\":false},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":true,\"alias\":null,\"type\":\"phrase\",\"key\":\"seqnum\",\"value\":\"1\",\"params\":{\"query\":1,\"type\":\"phrase\"}},\"query\":{\"match\":{\"seqnum\":{\"query\":1,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"objectname.keyword\",\"value\":\"exists\"},\"exists\":{\"field\":\"objectname.keyword\"},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b4ef6a90-3cd5-11e8-b39d-7b11fee2312d",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process Error",
+      "visState": "{\"title\":\"La Banque Process Error\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"#\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"processprocessname.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Process\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Completed/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Completed\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Terminated/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Terminated\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['starterusername.keyword'].value =~ /Scheduler/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Scheduler\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['starterusername.keyword'].value =~ /Scheduler/) return 0; return 1;\\\"\\n }\\n\\n}\",\"customLabel\":\"Manual\"}}]}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"params\": {\n      \"sort\": {\n        \"columnIndex\": null,\n        \"direction\": null\n      }\n    }\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"blueprism.process.completed-*\",\"key\":\"seqnum\",\"negate\":false,\"params\":{\"query\":1,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"1\"},\"query\":{\"match\":{\"seqnum\":{\"query\":1,\"type\":\"phrase\"}}}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e21a51d0-418d-11e8-9f9c-73ac8cda67d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque log message",
+      "visState": "{\"title\":\"La Banque log message\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"result.keyword\",\"size\":100,\"customLabel\":\"Message list\"}}]}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"params\": {\n      \"sort\": {\n        \"columnIndex\": null,\n        \"direction\": null\n      }\n    }\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"type\":\"phrase\",\"key\":\"processprocessname.keyword\",\"value\":\"DowloadTestP\",\"params\":{\"query\":\"DowloadTestP\",\"type\":\"phrase\"},\"disabled\":true,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"processprocessname.keyword\":{\"query\":\"DowloadTestP\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"result:ERROR\"}}"
+      }
+    }
+  },
+  {
+    "_id": "657c25e0-3f62-11e8-94b0-bf64b9836559",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process Average Duration",
+      "visState": "{\"title\":\"La Banque Process Average Duration\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":true,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average processduration\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average processduration\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"cardinal\",\"lineWidth\":3}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"processduration\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"startdatetime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"group\",\"params\":{\"field\":\"processprocessname.keyword\",\"size\":10}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c1c079f0-3cc9-11e8-b39d-7b11fee2312d",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process Infio List",
+      "visState": "{\"title\":\"La Banque Process Infio List\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"#\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"processprocessname.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Process\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"processduration\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\" return doc['processduration'].value / 100;\\\"\\n\\n}}\",\"customLabel\":\"Runtime/min\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"processduration\",\"customLabel\":\"Min/s\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"processduration\",\"customLabel\":\"Avg/s\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"processduration\",\"customLabel\":\"Max/s\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Completed/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Completed\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Terminated/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Terminated\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['starterusername.keyword'].value =~ /Scheduler/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Scheduler\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['starterusername.keyword'].value =~ /Scheduler/) return 0; return 1;\\\"\\n }\\n\\n}\",\"customLabel\":\"Manual\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}},\"spy\":null}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"seqnum\",\"value\":\"1\",\"params\":{\"query\":1,\"type\":\"phrase\"}},\"query\":{\"match\":{\"seqnum\":{\"query\":1,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"status.keyword\",\"value\":\"exists\"},\"exists\":{\"field\":\"status.keyword\"},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "95684bc0-3d92-11e8-b8d7-c3e99c28c163",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process Status Bar",
+      "visState": "{\"title\":\"La Banque Process Status Bar\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Terminated\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true},{\"show\":true,\"mode\":\"stacked\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"3\",\"label\":\"Completed\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"radiusRatio\":51,\"orderBucketsBySum\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Terminated/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Terminated\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"processprocessname.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Completed/) return 1; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Completed\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Count\":\"#E0752D\",\"Completed\":\"#3F6833\",\"Total\":\"#3F6833\",\"Terminated\":\"#E24D42\"},\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"type\":\"phrase\",\"key\":\"processprocessname.keyword\",\"value\":\"DowloadTestP\",\"params\":{\"query\":\"DowloadTestP\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"processprocessname.keyword\":{\"query\":\"DowloadTestP\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"type\":\"phrase\",\"key\":\"processprocessname.keyword\",\"value\":\"Hello World Random\",\"params\":{\"query\":\"Hello World Random\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"processprocessname.keyword\":{\"query\":\"Hello World Random\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c5781500-3d1c-11e8-9f0b-d99acf6f84c0",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process with Error",
+      "visState": "{\"title\":\"La Banque Process with Error\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sessionnumber\",\"customLabel\":\"# Process with Error\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"processprocessname.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Process\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# error messages\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}},\"spy\":null}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"result:\\\"?ERROR*\\\"\"}},\"meta\":{\"index\":\"blueprism.process.completed-*\",\"disabled\":false,\"alias\":null,\"type\":\"query_string\",\"key\":\"query\",\"value\":\"result:\\\"?ERROR*\\\"\",\"negate\":false},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c28ff6e0-3de5-11e8-be01-d3446fe97746",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Metric Process - system error rate",
+      "visState": "{\"title\":\"La Banque Metric Process - system error rate\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":5},{\"from\":5,\"to\":10},{\"from\":10,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"Background\",\"percentageMode\":true,\"style\":{\"bgColor\":true,\"bgFill\":\"#000\",\"fontSize\":40,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"seqnum\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['status.keyword'].value =~ /Terminated/) return 100; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"System Error Rate\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"seqnum\",\"value\":\"1\",\"params\":{\"query\":1,\"type\":\"phrase\"}},\"query\":{\"match\":{\"seqnum\":{\"query\":1,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c1846530-3de3-11e8-be01-d3446fe97746",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Metric Process - Total Message  error rate",
+      "visState": "{\"title\":\"La Banque Metric Process - Total Message  error rate\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":true,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"Background\",\"colorsRange\":[{\"from\":0,\"to\":5},{\"from\":5,\"to\":10},{\"from\":10,\"to\":100}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":true,\"labelColor\":false,\"subText\":\"\",\"fontSize\":40}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"seqnum\",\"json\":\"{ \\\"script\\\" : {\\n\\\"lang\\\": \\\"painless\\\",\\n\\\"source\\\" : \\\"if (doc['result.keyword'].value =~ /ERROR/) return 100; return 0;\\\"\\n }\\n\\n}\",\"customLabel\":\"Error Message Rate\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"blueprism.process.completed-*\",\"filter\":[{\"meta\":{\"index\":\"blueprism.process.completed-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"result.keyword\",\"value\":\"exists\"},\"exists\":{\"field\":\"result.keyword\"},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b2c369f0-3d71-11e8-b8d7-c3e99c28c163",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Heartbeat",
+      "visState": "{\"title\":\"La Banque Heartbeat\",\"type\":\"metrics\",\"params\":{\"annotations\":[{\"fields\":\"status, processprocessname, runningresourcename\",\"template\":\"TERMINATED {{runningresourcename}}-{{processprocessname}}\",\"index_pattern\":\"blueprism.process.completed-*\",\"query_string\":\"status:Terminated AND seqnum:1\",\"color\":\"rgba(223,18,18,1)\",\"icon\":\"fa-bomb\",\"id\":\"beef1b20-3d71-11e8-b222-335bdced6b05\",\"ignore_global_filters\":0,\"ignore_panel_filters\":1,\"time_field\":\"startdatetime\"},{\"fields\":\"status, processprocessname, runningresourcename,starterusername\",\"template\":\"MANUAL {{runningresourcename}}-{{processprocessname}}-{{starterusername}}\",\"index_pattern\":\"blueprism.process.completed-*\",\"query_string\":\"-starterusername:Scheduler AND seqnum:1\",\"color\":\"rgba(153,153,153,1)\",\"icon\":\"fa-exclamation-triangle\",\"id\":\"7d7887c0-3e35-11e8-87cd-b3af9876420b\",\"ignore_global_filters\":1,\"ignore_panel_filters\":1,\"time_field\":\"startdatetime\"}],\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"blueprism.process.completed-*\",\"interval\":\"auto\",\"markdown\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"rgba(174,186,160,1)\",\"fill\":\"0.5\",\"formatter\":\"number\",\"hide_in_legend\":1,\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"line_width\":\"1\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\",\"steps\":1}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"startdatetime\",\"type\":\"timeseries\",\"background_color\":null},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "09a78060-3d15-11e8-92e9-6566ef92bf58",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Duration",
+      "visState": "{\"title\":\"La Banque Duration\",\"type\":\"vega\",\"params\":{\"spec\":\"{\\n  \\\"$schema\\\": \\\"https://vega.github.io/schema/vega-lite/v2.json\\\",\\n  \\\"description\\\": \\\"A simple bar chart with embedded data.\\\",\\n  \\\"width\\\": 600,\\n  \\\"hight\\\": 400,\\n  \\\"data\\\": {\\n    \\\"url\\\": {\\n      \\\"%context%\\\": true,\\n      \\\"%timefield%\\\": \\\"startdatetime\\\",\\n      \\\"index\\\": \\\"blueprism.process.completed*\\\",\\n      \\\"body\\\": {\\n        \\\"aggs\\\": {\\n          \\\"my_buckets\\\": {\\n            \\\"composite\\\": {\\n            \\\"size\\\": 10000,\\n              \\\"sources\\\": [\\n                {\\n                  \\\"date\\\": {\\n                    \\\"date_histogram\\\": {\\n                      \\\"field\\\": \\\"startdatetime\\\",\\n                      \\\"interval\\\": {\\\"%autointerval%\\\": true},\\n                      \\\"order\\\": \\\"asc\\\",\\n                      \\\"time_zone\\\": \\\"America/New_York\\\"\\n                    }\\n                  }\\n                },\\n                {\\n                  \\\"product\\\": {\\n                    \\\"terms\\\": {\\n                      \\\"field\\\": \\\"processprocessname.keyword\\\"\\n                    }\\n                  }\\n                }\\n              ]\\n            }\\n          }\\n        },\\n        \\\"docvalue_fields\\\": [\\n          \\\"time\\\",\\n          \\\"startdatetime\\\"\\n        ]\\n      }\\n    },\\n    \\\"format\\\": {\\n      \\\"property\\\": \\\"aggregations.my_buckets.buckets\\\"\\n    }\\n  },\\n  \\\"mark\\\": \\\"bar\\\"\\n  \\\"interactive\\\": true,\\n  \\\"encoding\\\": {\\n    \\\"x\\\": {\\n      \\\"field\\\": \\\"key.date\\\",\\n      \\\"type\\\": \\\"temporal\\\"},\\n      \\n    \\\"y\\\": {\\n      \\\"field\\\": \\\"doc_count\\\",\\n      \\\"type\\\": \\\"quantitative\\\"\\n    },\\n    \\\"color\\\": {\\n      \\\"field\\\": \\\"key.product\\\",\\n      \\\"aggregate\\\": \\\"doc_count\\\",\\n      \\\"type\\\": \\\"nominal\\\",\\n    }\\n  }\\n}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "5934f2e0-3f61-11e8-94b0-bf64b9836559",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Process count",
+      "visState": "{\"title\":\"La Banque Process count\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\",\"field\":\"processduration\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":\"1\",\"point_size\":1,\"fill\":\".2\",\"stacked\":\"stacked\",\"offset_time\":\"\",\"override_index_pattern\":1,\"series_index_pattern\":\"blueprism.process.completed-*\",\"series_interval\":\"auto\",\"series_time_field\":\"startdatetime\",\"terms_field\":\"processprocessname.keyword\",\"value_template\":\"{{value}}\",\"filter\":\"seqnum:1\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"blueprism.process.completed-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":0,\"show_grid\":1,\"filter\":\"seqnum:1\",\"annotations\":[]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "df9a7790-3d15-11e8-92e9-6566ef92bf58",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Duration",
+      "visState": "{\"title\":\"La Banque Duration\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\",\"field\":\"processduration\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":\"1\",\"point_size\":1,\"fill\":\".2\",\"stacked\":\"stacked\",\"offset_time\":\"\",\"override_index_pattern\":1,\"series_index_pattern\":\"blueprism.process.completed-*\",\"series_interval\":\"auto\",\"series_time_field\":\"startdatetime\",\"terms_field\":\"processprocessname.keyword\",\"value_template\":\"{{value}}\",\"filter\":\"seqnum:1\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"blueprism.process.completed-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":0,\"show_grid\":1,\"filter\":\"seqnum:1\",\"annotations\":[]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "515212c0-4181-11e8-9f9c-73ac8cda67d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Heartbeat legend",
+      "visState": "{\"title\":\"La Banque Heartbeat legend\",\"type\":\"markdown\",\"params\":{\"fontSize\":8,\"markdown\":\"[Heatmap](#/dashboard/f2c18630-4123-11e8-bf9b-bbaa914f4c83) | [Management](#/dashboard/cab49fa0-3f62-11e8-94b0-bf64b9836559)|[Controller](#/dashboard/7c309360-3d01-11e8-92e9-6566ef92bf58)|[Investigate](#/dashboard/ab4aafc0-3fb1-11e8-ba97-edbc90a9fc1b)\\n# Legend\\n- Box Size relates to how many processes have ran\\n- Box Color relates to the severity of the erros being caught\\n- Box vivid level of color relates to the intensity or number of errors\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "89c8e790-3fac-11e8-ba97-edbc90a9fc1b",
+    "_type": "visualization",
+    "_source": {
+      "title": "La Banque Navigate",
+      "visState": "{\"title\":\"La Banque Navigate\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[Heatmap](#/dashboard/f2c18630-4123-11e8-bf9b-bbaa914f4c83) | [Management](#/dashboard/cab49fa0-3f62-11e8-94b0-bf64b9836559)|[Controller](#/dashboard/7c309360-3d01-11e8-92e9-6566ef92bf58)|[Investigate](#/dashboard/ab4aafc0-3fb1-11e8-ba97-edbc90a9fc1b)\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  }
+]

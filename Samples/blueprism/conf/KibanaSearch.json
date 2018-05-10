@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "d013d4a0-4db5-11e8-9372-59f983c5d438",
+    "_type": "search",
+    "_source": {
+      "title": "La Banque log",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "result"
+      ],
+      "sort": [
+        "startdatetime",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"blueprism.process.completed-*\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"result:ERROR\"\n  },\n  \"filter\": []\n}"
+      }
+    }
+  }
+]

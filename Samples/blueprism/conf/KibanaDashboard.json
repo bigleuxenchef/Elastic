@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "7c309360-3d01-11e8-92e9-6566ef92bf58",
+    "_type": "dashboard",
+    "_source": {
+      "title": "La Banque Controler",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[\n  {\n    \"embeddableConfig\": {\n      \"spy\": null,\n      \"vis\": {\n        \"params\": {\n          \"sort\": {\n            \"columnIndex\": 9,\n            \"direction\": \"desc\"\n          }\n        }\n      }\n    },\n    \"gridData\": {\n      \"h\": 3,\n      \"i\": \"1\",\n      \"w\": 7,\n      \"x\": 5,\n      \"y\": 5\n    },\n    \"id\": \"c1c079f0-3cc9-11e8-b39d-7b11fee2312d\",\n    \"panelIndex\": \"1\",\n    \"title\": \"Process Stats\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 2,\n      \"i\": \"3\",\n      \"w\": 7,\n      \"x\": 5,\n      \"y\": 3\n    },\n    \"id\": \"df9a7790-3d15-11e8-92e9-6566ef92bf58\",\n    \"panelIndex\": \"3\",\n    \"title\": \"Process duration\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"embeddableConfig\": {\n      \"spy\": null,\n      \"vis\": {\n        \"params\": {\n          \"sort\": {\n            \"columnIndex\": 2,\n            \"direction\": \"desc\"\n          }\n        }\n      }\n    },\n    \"gridData\": {\n      \"h\": 3,\n      \"i\": \"4\",\n      \"w\": 5,\n      \"x\": 0,\n      \"y\": 5\n    },\n    \"id\": \"c5781500-3d1c-11e8-9f0b-d99acf6f84c0\",\n    \"panelIndex\": \"4\",\n    \"title\": \"Errors\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 3,\n      \"i\": \"5\",\n      \"w\": 7,\n      \"x\": 5,\n      \"y\": 0\n    },\n    \"id\": \"b2c369f0-3d71-11e8-b8d7-c3e99c28c163\",\n    \"panelIndex\": \"5\",\n    \"title\": \"Heartbeat\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"embeddableConfig\": {\n      \"vis\": {\n        \"colors\": {\n          \"1 - 1,000,000\": \"#BF1B00\",\n          \"1 - 5\": \"#E5AC0E\",\n          \"12 - 23\": \"#E24D42\",\n          \"5 - 9,999\": \"#BF1B00\",\n          \"6 - 12\": \"#EAB839\"\n        },\n        \"defaultColors\": {\n          \"0 - 1\": \"rgb(0,104,55)\",\n          \"1 - 1,000,000\": \"rgb(183,224,117)\"\n        },\n        \"legendOpen\": false\n      }\n    },\n    \"gridData\": {\n      \"h\": 4,\n      \"i\": \"10\",\n      \"w\": 5,\n      \"x\": 0,\n      \"y\": 1\n    },\n    \"id\": \"b0799920-3eb2-11e8-b3b7-2bab3e85ddf0\",\n    \"panelIndex\": \"10\",\n    \"title\": \"Heatmap\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 1,\n      \"i\": \"11\",\n      \"w\": 5,\n      \"x\": 0,\n      \"y\": 0\n    },\n    \"id\": \"89c8e790-3fac-11e8-ba97-edbc90a9fc1b\",\n    \"panelIndex\": \"11\",\n    \"title\": \"\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  }\n]",
+      "optionsJSON": "{\n  \"darkTheme\": false,\n  \"hidePanelTitles\": false,\n  \"useMargins\": false\n}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [],\n  \"highlightAll\": true,\n  \"version\": true\n}"
+      }
+    }
+  },
+  {
+    "_id": "d0de6f10-3ef8-11e8-a196-098864b702fd",
+    "_type": "dashboard",
+    "_source": {
+      "title": "La Banque Dashbboard - simple view",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[\n  {\n    \"embeddableConfig\": {\n      \"spy\": null,\n      \"vis\": {\n        \"params\": {\n          \"sort\": {\n            \"columnIndex\": 1,\n            \"direction\": \"desc\"\n          }\n        }\n      }\n    },\n    \"gridData\": {\n      \"h\": 3,\n      \"i\": \"1\",\n      \"w\": 9,\n      \"x\": 0,\n      \"y\": 0\n    },\n    \"id\": \"c1c079f0-3cc9-11e8-b39d-7b11fee2312d\",\n    \"panelIndex\": \"1\",\n    \"title\": \"Process stats\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 3,\n      \"i\": \"2\",\n      \"w\": 9,\n      \"x\": 0,\n      \"y\": 3\n    },\n    \"id\": \"b2c369f0-3d71-11e8-b8d7-c3e99c28c163\",\n    \"panelIndex\": \"2\",\n    \"title\": \"Process Activity\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  }\n]",
+      "optionsJSON": "{\n  \"darkTheme\": false,\n  \"hidePanelTitles\": false,\n  \"useMargins\": true\n}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"blueprism.process.completed-*\",\n        \"type\": \"phrase\",\n        \"key\": \"processprocessname.keyword\",\n        \"value\": \"DowloadTestP\",\n        \"params\": {\n          \"query\": \"DowloadTestP\",\n          \"type\": \"phrase\"\n        },\n        \"disabled\": true,\n        \"negate\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"match\": {\n          \"processprocessname.keyword\": {\n            \"query\": \"DowloadTestP\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"globalState\"\n      }\n    }\n  ],\n  \"highlightAll\": true,\n  \"version\": true\n}"
+      }
+    }
+  },
+  {
+    "_id": "cab49fa0-3f62-11e8-94b0-bf64b9836559",
+    "_type": "dashboard",
+    "_source": {
+      "title": "La Banque Management",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[\n  {\n    \"gridData\": {\n      \"h\": 2,\n      \"i\": \"7\",\n      \"w\": 2,\n      \"x\": 1,\n      \"y\": 1\n    },\n    \"id\": \"c1846530-3de3-11e8-be01-d3446fe97746\",\n    \"panelIndex\": \"7\",\n    \"title\": \"\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 2,\n      \"i\": \"8\",\n      \"w\": 2,\n      \"x\": 3,\n      \"y\": 1\n    },\n    \"id\": \"c28ff6e0-3de5-11e8-be01-d3446fe97746\",\n    \"panelIndex\": \"8\",\n    \"title\": \"\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"embeddableConfig\": {\n      \"vis\": {\n        \"colors\": {\n          \"1 - 5\": \"#E5AC0E\",\n          \"12 - 23\": \"#E24D42\",\n          \"5 - 9,999\": \"#BF1B00\",\n          \"6 - 12\": \"#EAB839\",\n          \"1 - 1,000,000\": \"#BF1B00\"\n        },\n        \"defaultColors\": {\n          \"0 - 1\": \"rgb(0,104,55)\",\n          \"1 - 1,000,000\": \"rgb(183,224,117)\"\n        },\n        \"legendOpen\": false\n      }\n    },\n    \"gridData\": {\n      \"h\": 5,\n      \"i\": \"10\",\n      \"w\": 5,\n      \"x\": 0,\n      \"y\": 3\n    },\n    \"id\": \"b0799920-3eb2-11e8-b3b7-2bab3e85ddf0\",\n    \"panelIndex\": \"10\",\n    \"title\": \"Process heatmap\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 4,\n      \"i\": \"11\",\n      \"w\": 7,\n      \"x\": 5,\n      \"y\": 0\n    },\n    \"id\": \"657c25e0-3f62-11e8-94b0-bf64b9836559\",\n    \"panelIndex\": \"11\",\n    \"title\": \"Process Average Duration\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"gridData\": {\n      \"h\": 1,\n      \"i\": \"13\",\n      \"w\": 5,\n      \"x\": 0,\n      \"y\": 0\n    },\n    \"id\": \"89c8e790-3fac-11e8-ba97-edbc90a9fc1b\",\n    \"panelIndex\": \"13\",\n    \"title\": \"\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"embeddableConfig\": {\n      \"vis\": {\n        \"legendOpen\": false\n      }\n    },\n    \"gridData\": {\n      \"h\": 4,\n      \"i\": \"14\",\n      \"w\": 7,\n      \"x\": 5,\n      \"y\": 4\n    },\n    \"id\": \"9aa46fc0-3fad-11e8-ba97-edbc90a9fc1b\",\n    \"panelIndex\": \"14\",\n    \"title\": \"Number of Process Executed\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  }\n]",
+      "optionsJSON": "{\n  \"darkTheme\": false,\n  \"hidePanelTitles\": false,\n  \"useMargins\": false\n}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [],\n  \"highlightAll\": true,\n  \"version\": true\n}"
+      }
+    }
+  },
+  {
+    "_id": "f2c18630-4123-11e8-bf9b-bbaa914f4c83",
+    "_type": "dashboard",
+    "_source": {
+      "title": "La Banque Heatmap",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[\n  {\n    \"panelIndex\": \"5\",\n    \"gridData\": {\n      \"x\": 4,\n      \"y\": 0,\n      \"w\": 8,\n      \"h\": 2,\n      \"i\": \"5\"\n    },\n    \"id\": \"c5626760-4180-11e8-9f9c-73ac8cda67d6\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"panelIndex\": \"6\",\n    \"gridData\": {\n      \"x\": 0,\n      \"y\": 0,\n      \"w\": 4,\n      \"h\": 2,\n      \"i\": \"6\"\n    },\n    \"id\": \"515212c0-4181-11e8-9f9c-73ac8cda67d6\",\n    \"type\": \"visualization\",\n    \"version\": \"6.2.1\"\n  },\n  {\n    \"panelIndex\": \"7\",\n    \"gridData\": {\n      \"x\": 0,\n      \"y\": 2,\n      \"w\": 12,\n      \"h\": 7,\n      \"i\": \"7\"\n    },\n    \"version\": \"6.2.1\",\n    \"type\": \"visualization\",\n    \"id\": \"39ebf4f0-41d3-11e8-a44c-bdc2e55ff257\"\n  }\n]",
+      "optionsJSON": "{\n  \"darkTheme\": false,\n  \"hidePanelTitles\": true,\n  \"useMargins\": false\n}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"blueprism.process.completed-*\",\n        \"type\": \"phrase\",\n        \"key\": \"processprocessname.keyword\",\n        \"value\": \"DowloadTestP\",\n        \"params\": {\n          \"query\": \"DowloadTestP\",\n          \"type\": \"phrase\"\n        },\n        \"disabled\": true,\n        \"negate\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"match\": {\n          \"processprocessname.keyword\": {\n            \"query\": \"DowloadTestP\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"globalState\"\n      }\n    }\n  ],\n  \"highlightAll\": true,\n  \"version\": true\n}"
+      }
+    }
+  },
+  {
+    "_id": "ab4aafc0-3fb1-11e8-ba97-edbc90a9fc1b",
+    "_type": "dashboard",
+    "_source": {
+      "title": "La Banque Investigate",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"4\",\"gridData\":{\"x\":6,\"y\":2,\"w\":6,\"h\":3,\"i\":\"4\"},\"embeddableConfig\":{\"spy\":null,\"vis\":{\"params\":{\"sort\":{\"columnIndex\":2,\"direction\":\"desc\"}}}},\"id\":\"c5781500-3d1c-11e8-9f0b-d99acf6f84c0\",\"title\":\"Errors\",\"type\":\"visualization\",\"version\":\"6.2.1\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":2,\"i\":\"5\"},\"id\":\"b2c369f0-3d71-11e8-b8d7-c3e99c28c163\",\"title\":\"Heartbeat\",\"type\":\"visualization\",\"version\":\"6.2.1\"},{\"title\":\"Heatmap\",\"panelIndex\":\"10\",\"gridData\":{\"x\":0,\"y\":1,\"w\":6,\"h\":4,\"i\":\"10\"},\"embeddableConfig\":{\"vis\":{\"colors\":{\"1 - 1,000,000\":\"#BF1B00\",\"1 - 5\":\"#E5AC0E\",\"12 - 23\":\"#E24D42\",\"5 - 9,999\":\"#BF1B00\",\"6 - 12\":\"#EAB839\"},\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 1,000,000\":\"rgb(183,224,117)\"},\"legendOpen\":false}},\"id\":\"b0799920-3eb2-11e8-b3b7-2bab3e85ddf0\",\"type\":\"visualization\",\"version\":\"6.2.1\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":0,\"w\":6,\"h\":1,\"i\":\"11\"},\"id\":\"89c8e790-3fac-11e8-ba97-edbc90a9fc1b\",\"title\":\"\",\"type\":\"visualization\",\"version\":\"6.2.1\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":5,\"w\":12,\"h\":4,\"i\":\"13\"},\"id\":\"d013d4a0-4db5-11e8-9372-59f983c5d438\",\"title\":\"Logging\",\"type\":\"search\",\"version\":\"6.2.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]

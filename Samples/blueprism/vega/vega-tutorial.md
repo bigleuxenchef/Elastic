@@ -1,3 +1,9 @@
+---
+Title | Author | Date 
+---|---|---
+Vega tutorial in the context of Robotics | Rumi | ** April 2018**
+---
+
 # Vega tutorial : complete example
 
 here is the final product, you can see side by side when using the select option from the legend how it looks like:
