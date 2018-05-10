@@ -1,3 +1,9 @@
+---
+Title | Author | Date 
+---|---|---
+Elastic indice Bulk Rename/Copy   | Rumi | ** April 2018**
+---
+
 # Purpose
 
 During the development and learning or even while migrating or moving data in production, everyone is getting confronted to copy, rename or move data file, database table. In elastic, there is a curl command to rename an index, where the problem start to be fun is for example when you have files like logstash-YYYY.MM.DD, and for example you have hundreds to rename from logstash-YYYY.MM.DD to let's say newlogstash-YYYY.MM.DD, you are no going to type the commands hundred times. this is where this script gets very useful.
