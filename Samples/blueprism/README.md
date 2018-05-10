@@ -2,7 +2,7 @@
 ---
 Title | Author | Date 
 ---|---|---
-blueprism Management Dashboard | | ** April 2018**
+blueprism Management Dashboard | Rumi | ** April 2018**
 ---
 
 
@@ -397,3 +397,6 @@ Features implemented in the heatmap are :
 - [:eyes:here bot utilization](./BotConsumption.md)
 - [:eyes:here Vega Tutorial](./vega/vega-tutorial.md)
 
+### Configuration
+
+All configuration is stored [here](./config)
