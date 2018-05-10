@@ -2,7 +2,7 @@
 ---
 Title | Author | Date 
 ---|---|---
-blueprism Management Dashboard | Rumi | ** April 2018**
+Blueprism Management Dashboard | Rumi | ** April 2018**
 ---
 
 
@@ -16,6 +16,7 @@ blueprism Management Dashboard | Rumi | ** April 2018**
         - [Standard Kibana Visualization](#standard-kibana-visualization)
             - [Heatmap](#heatmap)
         - [Extended feature : bot utilization](#extended-feature--bot-utilization)
+        - [Configuration](#configuration)
 
 <!-- /TOC -->
 
