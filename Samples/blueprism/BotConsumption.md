@@ -1,3 +1,8 @@
+---
+Title | Author | Date 
+---|---|---
+Blueprism bot consumption | Rumi | ** April 2018**
+---
 # Effective measure of bot consumption
 
 ## Business problem definition
