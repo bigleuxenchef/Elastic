@@ -400,4 +400,4 @@ Features implemented in the heatmap are :
 
 ### Configuration
 
-All configuration is stored [here](./config)
+All configuration is stored [here](./conf)
