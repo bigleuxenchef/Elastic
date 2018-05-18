@@ -16,6 +16,7 @@
 - Lets assume we would like to change the content of `processprocessname` the following way and in the same time for now just recreate a new index (same principal can be apply in simply updating instead of recreacting):
 
     "HelloWorld" => "MortgagePayment"
+    
     "HelloWorld No Delay" => "Payment Cancellation"
     "10 times Hello World" => "BulkMortgagePayment"
     "Loop on simple SQL to Rest" => "LoanOnBoarding"
