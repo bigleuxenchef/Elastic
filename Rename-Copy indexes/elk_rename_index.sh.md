@@ -6,11 +6,13 @@ Elastic indice Bulk Rename/Copy   | Rumi | ** April 2018**
 
 # Purpose
 
-During the development and learning or even while migrating or moving data in production, everyone is getting confronted to copy, rename or move data file, database table. In elastic, there is a curl command to rename an index, where the problem start to be fun is for example when you have files like logstash-YYYY.MM.DD, and for example you have hundreds to rename from logstash-YYYY.MM.DD to let's say newlogstash-YYYY.MM.DD, you are no going to type the commands hundred times. this is where this script gets very useful.
+During the development and learning or even while migrating or moving data in production, everyone is getting confronted to copy, rename or move data file, database table. In elastic, there is a curl command to rename an index, where the problem start to be fun is for example when you have files like *logstash-YYYY.MM.DD*, and for example you have hundreds to rename from *logstash-YYYY.MM.DD* to let's say *newlogstash-YYYY.MM.DD*, you are no going to type the commands hundred times. this is where this script gets very useful.
 
 ## Use case \#1 : Reindex/Rename
 
-In elastic, there is nothing else than `reindex` command to achieve both reindex and rename, you cannot reindex the current index like you would do in the databas where you keep the original table and change it. In elastic, reindexing means creating a new one from the old one.
+In elastic, there is nothing else than `reindex` command to achieve both reindex and rename, you cannot reindex the current index like you would do in the database where you keep the original table and change it. In elastic, reindexing means creating a new one from the old one.
+
+> However there is the alias feature that can be useful in some case
 
 The script `elk_rename_index.sh` is achieving that using pattern, such as :
 
