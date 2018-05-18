@@ -190,7 +190,7 @@ Code for heatmap :
           "size": 0,
           "aggs": {
             "process": {
-              "terms": {"field": "processprocessname.keyword"},
+              "terms": {"field": "processprocessname.keyword","size" : 50},
               "aggs": {
                 "seqnum": {
                   "filter": {"term": {"seqnum": 1}},
@@ -238,12 +238,12 @@ Code for heatmap :
         {
           "type": "formula",
           "as": "severity",
-          "expr": "min(19*(datum.Terminated.Terminated_count.value/datum.seqnum.doc_count)+5*(datum.error.Process_On_Error_count.value/datum.seqnum.doc_count),19)"
+          "expr": "min(19*(datum.Terminated.Terminated_count.value/datum.seqnum.doc_count)+19*(datum.error.Process_On_Error_count.value/datum.seqnum.doc_count),19)"
         },
         {
           "type": "formula",
           "as": "density",
-          "expr": "min((datum.Terminated.Terminated_count.value/datum.seqnum.doc_count)+(datum.error.doc_count/datum.seqnum.doc_count),20)"
+          "expr": "min(3*(datum.Terminated.Terminated_count.value/datum.seqnum.doc_count)+3*(datum.error.doc_count/datum.seqnum.doc_count),3)"
         },
         {"type": "formula", "as": "name", "expr": "datum.key"},
         {
