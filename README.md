@@ -13,6 +13,7 @@ Robotics & Multi-purpose Repository |Rumi | ** April 2018**
 ## Utilities
 - [:eyes:Elastic Delete duplicates with logstash](./DeleteDuplicates/LogstashDeleteSample.md)
 - [:eyes:Elastic bulk rename index](./Rename-Copy%20indexes/elk_rename_index.sh.md)
+- [:eyes:Elastic bulk Translate field of existing index](./Bulk-Translate/bulk-translate-current-index.md)
 - [:eyes:Installing x-pack offline](./Installingxpackoffline.md)
 - [:eyes:Installing plug-ins offline](./elasticplugins.md)
 - [:eyes:Elastic Query & Aggregation](./elastic-querying.md)
