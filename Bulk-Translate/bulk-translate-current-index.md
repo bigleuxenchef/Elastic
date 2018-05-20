@@ -91,6 +91,4 @@ output {
  # stdout { codec => rubydebug }
 }
 
-
-
 ```
