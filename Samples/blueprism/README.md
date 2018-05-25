@@ -178,7 +178,7 @@ Let's look at the following section of teh watcher which define how the layout o
 
 This will generate a mail body like
 
-```javascript
+```bash
 # this lime will be in the body of the mail sent by the watcher
 12 error logs found
 ```
