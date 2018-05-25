@@ -5,26 +5,30 @@ Title | Author | Date
 Blueprism Management Dashboard | Rumi | ** April 2018**
 ---
 
-
 <!-- TOC -->
 
 - [Background](#background)
-    - [Final product](#final-product)
-    - [Features](#features)
-        - [Watcher](#watcher)
-        - [Vega Visualization](#vega-visualization)
-        - [Standard Kibana Visualization](#standard-kibana-visualization)
-            - [Heatmap](#heatmap)
-        - [Extended feature : bot utilization](#extended-feature--bot-utilization)
-        - [Configuration](#configuration)
+- [Final product](#final-product)
+- [Features](#features)
+    - [Watcher](#watcher)
+        - [Elasticsearch.yml configuration for watcher](#elasticsearchyml-configuration-for-watcher)
+        - [Formating the output of the watcher](#formating-the-output-of-the-watcher)
+        - [Formating the output of the watcher : using mustache](#formating-the-output-of-the-watcher--using-mustache)
+    - [Vega Visualization](#vega-visualization)
+    - [Visual builder including annotation](#visual-builder-including-annotation)
+    - [Standard Kibana Visualization](#standard-kibana-visualization)
+        - [Heatmap](#heatmap)
+    - [Extended feature : bot utilization](#extended-feature--bot-utilization)
+    - [Configuration](#configuration)
 
 <!-- /TOC -->
+
 
 # Background
 
 This use case was about building dashboard and monitoring for blueprism in addition to the control room and logging capability in Blueprism.
 
-## Final product
+# Final product
 
 The final product is made of 5 dashboards :
 
@@ -54,19 +58,18 @@ Each time a error happens (like the  :bomb:), an alert is generated using the wa
 
 <img src="./Images/Alerting.png" width=100%>
 
+# Features
 
-
-## Features
-
+- Watcher
 - Vega Visualization
 - Visual builder including annotation
 - Kibana visualization including scripting features
 
-### Watcher
+## Watcher
 
 Watcher code looks like 
 
-```
+```javascript
 {
     "trigger": {
         "schedule": {
@@ -130,9 +133,9 @@ Watcher code looks like
 }
 ```
 
-Elasticsearch.yml configuration for watcher
+### Elasticsearch.yml configuration for watcher
 
-```
+```javascript
 #xpack.watcher.enabled: true
 #xpack.notification.email.account:
 #    gmail_account:
@@ -150,8 +153,129 @@ Elasticsearch.yml configuration for watcher
 
 ```
 
+### Formating the output of the watcher
 
-### Vega Visualization
+Let's look at the following section of teh watcher which define how the layout of the mail will look like:
+
+```json
+"actions": {
+        "send_email": {
+            "email": {
+                "to": "<name>@<corporation>",
+                "subject": "Watcher Notification Encountered {{ctx.payload.hits.total}} errors",
+                "body": "{{ctx.payload.hits.total}} error logs found",
+                "attachments": {
+                    "attached_data.json": {
+                        "data": {
+                            "format": "json"
+                        }
+                    }
+                }
+            }
+        }
+      }
+```
+
+This will generate a mail body like
+
+```javascript
+# this lime will be in the body of the mail sent by the watcher
+12 error logs found
+```
+### Formating the output of the watcher : using mustache
+
+Using [mustache](https://mustache.github.io/) to format the output in a dynamic way as follow:
+
+```javascript
+ "actions": {
+        "send_email": {
+            "email": {
+                "to": "<name>@<corporation>",
+                "subject": "Watcher Notification Encountered {{ctx.payload.hits.total}} errors",
+                "body": "{{ctx.payload.hits.total}} error logs found\n\n Process impacted:\n\n{{#ctx.payload.aggregations.process.buckets}}{{key}}\n\n{{/ctx.payload.aggregations.process.buckets}}",
+                "attachments": {
+                    "attached_data.json": {
+                        "data": {
+                            "format": "json"
+                        }
+                    }
+                }
+            }
+        }
+    }
+```
+
+The interesting block to consider it the body, let's reformat it
+
+```javascript
+error logs found
+
+Process impacted:
+
+{{#ctx.payload.aggregations.process.buckets}}
+    {{key}}
+{{/ctx.payload.aggregations.process.buckets}}"
+```
+
+The output part of the watcher is consuming the result of the search, here is an example of the result
+
+```
+"result": {
+    "execution_time": "2018-05-25T02:07:00.552Z",
+    "execution_duration": 3885,
+    "input": {
+      "type": "search",
+      "status": "success",
+      "payload": {
+        "_shards": {
+          "total": 19,
+          "failed": 0,
+          "successful": 19,
+          "skipped": 0
+        },
+        "hits": {
+          "hits": [],
+          "total": 2,
+          "max_score": 0
+        },
+        "took": 5,
+        "timed_out": false,
+        "aggregations": {
+          "process": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "doc_count": 1,
+                "key": "DownloadTest"
+              },
+              {
+                "doc_count": 1,
+                "key": "PegaCRM"
+              }  
+            ]
+          }
+        }
+      }
+
+```
+
+
+that will generate the following email body:
+
+```javasscript
+# here under is an example where mustache generates two entries for process impacted based on the input.
+
+ 2 error logs found
+   
+    Process impacted:
+   
+    DownloadTest
+    PegaCRM
+
+```
+
+## Vega Visualization
 
 Code for heatmap :
 
@@ -378,10 +502,13 @@ Code for heatmap :
 }
 ```
 
+## Visual builder including annotation
 
-### Standard Kibana Visualization
 
-#### Heatmap
+
+## Standard Kibana Visualization
+
+### Heatmap
 
 Features implemented in the heatmap are :
 
@@ -394,10 +521,10 @@ Features implemented in the heatmap are :
 <img src="./Images/kibana-heatmap-1.png" width=10%><img src="./Images/kibana-heatmap-2.png" width=65%>
 </p>
 
-### Extended feature : bot utilization
+## Extended feature : bot utilization
 - [:eyes:here bot utilization](./BotConsumption.md)
 - [:eyes:here Vega Tutorial](./vega/vega-tutorial.md)
 
-### Configuration
+## Configuration
 
 All configuration is stored [here](./conf)

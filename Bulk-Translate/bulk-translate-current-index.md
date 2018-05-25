@@ -1,3 +1,16 @@
+
+---
+Title | Author | Date 
+---|---|---
+Bulk Translate on existing index | Rumi | ** April 2018**
+
+---
+Area |
+---|
+ Operationalize Robotics Process Automation|
+---
+
+
 # Bulk Translate on existing index
 
 ## Background
