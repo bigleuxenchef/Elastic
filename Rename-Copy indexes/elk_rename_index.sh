@@ -32,7 +32,7 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-The 
+
 
 indexes=$(curl -XGET "$ELKHOSTPORT/_cat/indices?v&pretty" | awk '{ if (NR > 1) { print $3}}'|grep $INDEXPATTERN)
 for SOURCE in $indexes
