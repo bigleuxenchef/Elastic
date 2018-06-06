@@ -16,7 +16,8 @@ Robotics & Multi-purpose Repository |Rumi | ** April 2018**
 - [:eyes:Elastic bulk Translate field of existing index](./Bulk-Translate/bulk-translate-current-index.md)
 - [:eyes:Installing x-pack offline](./Installingxpackoffline.md)
 - [:eyes:Installing plug-ins offline](./elasticplugins.md)
-- [:eyes:Elastic Query & Aggregation](./elastic-querying.md)
+- [:eyes:x-pack security](./elasticplugins.md)
+- [:eyes:Elastic Query & Aggregation](./xpack_Set_Security_and_licenses.md)
 - [:eyes:Kibana Scripting](./kibana-scripting-filtering.md)
 - [:eyes:APM](./APM.md)
 
