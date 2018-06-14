@@ -20,6 +20,7 @@ Robotics & Multi-purpose Repository |Rumi | ** April 2018**
 - [:eyes:Elastic Query & Aggregation](./elastic-querying.md)
 - [:eyes:Kibana Scripting](./kibana-scripting-filtering.md)
 - [:eyes:APM](./APM.md)
+- [:eyes:Kibana Vega Tutorial](./Samples/blueprism/vega/vega-tutorial.md)
 
 ## Samples : Logstash configuration and Dashboard
 
