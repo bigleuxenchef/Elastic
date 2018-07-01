@@ -92,3 +92,21 @@ It should return something like:
     ```bash
     bin/x-pack/setup-passwords auto|interactive
     ```
+# X-PACK security on docker.
+
+Let's assume we do not have ssh in place and we have never setup license and security before.
+
+Start docker container with security off
+
+``` docker exec -i -t <container of elastisearch node 1> /bin/bash```
+
+
+
+
+
+
+
+
+
+
+
